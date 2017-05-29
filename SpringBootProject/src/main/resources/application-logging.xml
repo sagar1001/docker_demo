@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+  	
+  	<!-- appenders --> 
+  	<appender name="console" class="org.apache.log4j.ConsoleAppender"> 
+    		<param name="Target" value="System.out"/> 
+    		<param name="threshold" value="error"/>  <!-- add this parameter to the console appender -->
+    		<layout class="org.apache.log4j.PatternLayout"> 
+	      		<param name="ConversionPattern" value="[%t] %p %c - %m%n"/> <!-- note that %d is removed -->
+    		</layout>
+  	</appender> 
+	
+	<root> 
+    	<priority value ="warn" /> 
+   		<appender-ref ref="console" /> 
+  	</root> 
+
+
+</log4j:configuration>
