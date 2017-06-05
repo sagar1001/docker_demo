@@ -33,7 +33,7 @@ public class DemoConfiguration {
 	@Value("${jms.destinationqueue}")
 	private String jmsDestinationQueue;
 
-	@Bean
+	//@Bean
 	public JmsTemplate npdfJmsTemplate() throws JMSException {
 		JmsTemplate jmsTemplate = new JmsTemplate();
 		MQQueueConnectionFactory connectionFactory = new MQQueueConnectionFactory();
@@ -48,7 +48,7 @@ public class DemoConfiguration {
 		return jmsTemplate;
 	}
 
-	@Bean
+	//@Bean
 	public MQQueueConnectionFactory queueConnectionFactory() throws JMSException {
 
 		MQQueueConnectionFactory connectionFactory = new MQQueueConnectionFactory();
