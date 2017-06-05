@@ -12,7 +12,7 @@ public class DemoDao {
 
 	public Long getDataFromDB() {
 		Long latestId = (long) jdbcTemplate.queryForObject(
-				"SELECT MAX(UVS_ID) FROM odadmin.odruvv01", new Object[] {},
+				"SELECT id FROM apptable", new Object[] {},
 				Long.class);
 		return latestId;
 	}
