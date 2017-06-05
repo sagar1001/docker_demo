@@ -12,7 +12,7 @@ public class DemoMessageListener implements MessageListener {
 	private static final Logger LOGGER = Logger.getLogger(DemoMessageListener.class);
 
 	public void onMessage(Message message) {
-		/*if (message instanceof TextMessage) {
+		if (message instanceof TextMessage) {
 			String textMessage = "";
 			try {
 				textMessage = ((TextMessage) message).getText();
@@ -22,7 +22,7 @@ public class DemoMessageListener implements MessageListener {
 			}
 			LOGGER.info("Received message: " + textMessage);
 			System.out.println("Received message: " + textMessage);
-		}*/
+		}
 
 	}
 

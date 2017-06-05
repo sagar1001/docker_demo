@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class DemoMessageSender {
 
-	@Autowired
+	//@Autowired
 	private JmsTemplate jmsTemplate;
 
 	public void postMessageToQueue(String message) {
