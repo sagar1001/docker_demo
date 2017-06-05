@@ -30,6 +30,7 @@ public class DemoController {
 	public ResponseEntity<String> getDataFromDB() {
 
 		try {
+			LOGGER.info("Received request");
 			Long data = demoProcess.getDataFromDB();
 			return new ResponseEntity<String>("Data returned from DB: " + data, HttpStatus.OK);
 		} catch (Exception e) {
@@ -43,6 +44,7 @@ public class DemoController {
 	public ResponseEntity<String> postMessageToQueue(@RequestParam String message) {
 
 		try {
+			LOGGER.info("Received request");
 			demoProcess.postMessageToQueue(message);
 			return new ResponseEntity<String>("Message posted to queue: " + message, HttpStatus.OK);
 		} catch (Exception e) {
